@@ -1,0 +1,22 @@
+include:
+  - project: 'devops/svd/ci-templates'
+    ref: 4.0.0-migration
+    file: '/full_ci.yml'
+
+variables:  
+  REGISTRY_DEV_REPO: ukd-dwh-dg-docker-dev
+  REGISTRY_RC_REPO: ukd-dwh-dg-docker-rc
+  PROJECT_NAME: prisma-demo
+  ARTIFACT_TYPE: docker
+  REGISTRY_LOGIN: $ARTIFACTORY_LOGIN
+  REGISTRY_PASSWORD: $ARTIFACTORY_PASSWORD
+  NPM_ROOT: https://repo.dev002.local/artifactory/api/npm
+  NPM_DEV: ukd-dwh-dg-npm-dev
+  NPM_REMOTE: npm-remote
+  NODE_GENERIC_REPO: http://repo.dev002.local/artifactory/nodejs-generic/download/release
+  DOCKER_BUILD_ARGS: NPM_REGISTRY_DEV=$NPM_ROOT/$NPM_DEV NPM_REGISTRY_REMOTE=$NPM_ROOT/$NPM_REMOTE/ NODE_GENERIC_REPO=$NODE_GENERIC_REPO
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - ./**/node_modules/
