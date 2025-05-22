@@ -1,0 +1,9 @@
+stages:
+  - build
+
+"Building Docker image":
+  image: docker:26.1.4
+  services:
+    - docker:26.1.4-dind
+  script:
+    - docker build --progress=plain --no-cache -t prisma-demo:latest .
