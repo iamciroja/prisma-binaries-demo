@@ -35,6 +35,20 @@ Expected result:
 - image build failed
 - 'npx prisma generate' command produces the logs similar to the following:
 ```
+#12 [7/8] RUN DEBUG="*" npx prisma generate
+#12 2.333 prisma:cli:bin Failed to initialize the command state: Error: ENOENT: no such file or directory, open '/root/.config/prisma-nodejs/commands.json' +1013ms
+#12 2.336 prisma:config:loadConfigFromFile No config file found in the current working directory /foo +404ms
+#12 2.342 prisma:engines binaries to download libquery-engine, schema-engine +1015ms
+#12 2.352 prisma:get-platform Found distro info:
+#12 2.352 {
+#12 2.352   "targetDistro": "musl",
+#12 2.352   "familyDistro": "alpine",
+#12 2.352   "originalDistro": "alpine"
+#12 2.352 } +10ms
+#12 2.353 prisma:get-platform Don't know any platform-specific paths for "alpine" on x64 (x86_64) +1ms
+#12 2.353 prisma:get-platform Falling back to "ldconfig" and other generic paths +0ms
+#12 2.373 prisma:get-platform Found libssl.so file using "ldconfig" or other generic paths: libssl.so.3 +20ms
+#12 2.373 prisma:get-platform The parsed libssl version is: 3.0.x +0ms
 #12 2.376 prisma:fetch-engine:download file /foo/node_modules/@prisma/engines/libquery_engine-linux-musl-openssl-3.0.x.so.node does not exist and must be downloaded +3ms
 #12 2.377 prisma:fetch-engine:download file /foo/node_modules/@prisma/engines/schema-engine-linux-musl-openssl-3.0.x does not exist and must be downloaded +1ms
 #12 2.379 prisma:fetch-engine:download https://binaries.prisma.sh/all_commits/2060c79ba17c6bb9f5823312b6f6b7f4a845738e/linux-musl-openssl-3.0.x/libquery_engine.so.node.gz will be downloaded to /foo/node_modules/@prisma/engines/libquery_engine-linux-musl-openssl-3.0.x.so.node +2ms
