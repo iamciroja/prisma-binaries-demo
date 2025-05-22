@@ -9,7 +9,7 @@
 `docker build --no-cache --progress plain . `
 
 Expected result: 
-- image is build succesfully
+- image is built succesfully
 - 'npx prisma generate' command does not produce any "prisma:fetch-engine:download file ..." records in log
 
 ## TEST 2: build using Docker-in-Docker
