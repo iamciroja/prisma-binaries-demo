@@ -55,4 +55,7 @@ Expected result:
 #12 2.380 prisma:fetch-engine:download https://binaries.prisma.sh/all_commits/2060c79ba17c6bb9f5823312b6f6b7f4a845738e/linux-musl-openssl-3.0.x/schema-engine.gz will be downloaded to /foo/node_modules/@prisma/engines/schema-engine-linux-musl-openssl-3.0.x +1ms
 #12 2.381 prisma:fetch-engine:download Downloading https://binaries.prisma.sh/all_commits/2060c79ba17c6bb9f5823312b6f6b7f4a845738e/linux-musl-openssl-3.0.x/libquery_engine.so.node.gz to /foo/node_modules/@prisma/engines/libquery_engine-linux-musl-openssl-3.0.x.so.node ... +1ms
 #12 2.499 prisma:fetch-engine:download Downloading https://binaries.prisma.sh/all_commits/2060c79ba17c6bb9f5823312b6f6b7f4a845738e/linux-musl-openssl-3.0.x/schema-engine.gz to /foo/node_modules/@prisma/engines/schema-engine-linux-musl-openssl-3.0.x ... +118ms
+...
 ```
+
+Essential are the lines with "prisma:fetch-engine:download"
