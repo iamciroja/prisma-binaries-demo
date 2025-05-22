@@ -34,11 +34,11 @@ Push this repository in GitLab and see the CI pipeline log
 Expected result:
 - image build failed
 - 'npx prisma generate' command produces the logs similar to the following:
-`
+```
 #12 2.376 prisma:fetch-engine:download file /foo/node_modules/@prisma/engines/libquery_engine-linux-musl-openssl-3.0.x.so.node does not exist and must be downloaded +3ms
 #12 2.377 prisma:fetch-engine:download file /foo/node_modules/@prisma/engines/schema-engine-linux-musl-openssl-3.0.x does not exist and must be downloaded +1ms
 #12 2.379 prisma:fetch-engine:download https://binaries.prisma.sh/all_commits/2060c79ba17c6bb9f5823312b6f6b7f4a845738e/linux-musl-openssl-3.0.x/libquery_engine.so.node.gz will be downloaded to /foo/node_modules/@prisma/engines/libquery_engine-linux-musl-openssl-3.0.x.so.node +2ms
 #12 2.380 prisma:fetch-engine:download https://binaries.prisma.sh/all_commits/2060c79ba17c6bb9f5823312b6f6b7f4a845738e/linux-musl-openssl-3.0.x/schema-engine.gz will be downloaded to /foo/node_modules/@prisma/engines/schema-engine-linux-musl-openssl-3.0.x +1ms
 #12 2.381 prisma:fetch-engine:download Downloading https://binaries.prisma.sh/all_commits/2060c79ba17c6bb9f5823312b6f6b7f4a845738e/linux-musl-openssl-3.0.x/libquery_engine.so.node.gz to /foo/node_modules/@prisma/engines/libquery_engine-linux-musl-openssl-3.0.x.so.node ... +1ms
 #12 2.499 prisma:fetch-engine:download Downloading https://binaries.prisma.sh/all_commits/2060c79ba17c6bb9f5823312b6f6b7f4a845738e/linux-musl-openssl-3.0.x/schema-engine.gz to /foo/node_modules/@prisma/engines/schema-engine-linux-musl-openssl-3.0.x ... +118ms
-`
+```
