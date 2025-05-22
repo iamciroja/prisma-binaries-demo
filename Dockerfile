@@ -1,4 +1,4 @@
-FROM repo.dev002.local/ukd-dwh-dg-docker-dev/node:22.13.1-alpine3.21
+FROM node:22.13.1-alpine3.21
 
 WORKDIR /foo
 
